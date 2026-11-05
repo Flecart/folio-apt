@@ -1,0 +1,50 @@
+Package: folio-fonts-extra
+Architecture: all
+Version: 0.1.0~alpha1
+Priority: optional
+Section: tex
+Maintainer: folio developers <folio@users.noreply.github.com>
+Installed-Size: 46650
+Depends: folio (>= 0.1.0~alpha1)
+Filename: pool/alpha/f/folio-fonts-extra/folio-fonts-extra_0.1.0~alpha1_all.deb
+Size: 43188056
+MD5sum: 1fead170d6c6304282e76912e401aba3
+SHA1: 56d9f7cce36855c896add690d8497f72db5bd139
+SHA256: 345abdd2dac20356715251fd345b01a9a3975ec2c95c784d3be6d1002d4acd1a
+SHA512: 6ab6aba44e15da3c05d8fd04feda685c484e2a6707d1e264bd9ed39b7aac221fe3a06c91e05f07b83e8fd3eb045efe42d707b8f23eb5f8a54fe45fa42b1732c7
+Homepage: https://github.com/Flecart/folio
+Description: extra fonts for folio
+ The rest of cm-super (all EC shapes and sizes), every Latin Modern
+ encoding and the other PSNFSS families (Palatino, New Century
+ Schoolbook, Bookman, Avant Garde, Zapf Chancery), as a folio data
+ tree in /usr/share/folio/texmf-extra.
+
+Package: folio
+Architecture: amd64
+Version: 0.1.0~alpha1
+Priority: optional
+Section: tex
+Maintainer: folio developers <folio@users.noreply.github.com>
+Installed-Size: 42277
+Depends: libc6 (>= 2.34), libgcc-s1 (>= 4.2)
+Suggests: folio-fonts-extra, texlive-latex-base, texlive-latex-recommended
+Filename: pool/alpha/f/folio/folio_0.1.0~alpha1_amd64.deb
+Size: 31977052
+MD5sum: 48c4c6a7aca26a2ed73844feebe14b33
+SHA1: f136e0a87e59f8e43b58a56375d1c048a4d94aea
+SHA256: 546997292e21a3be57251af9db17804a2e16495f050e838af52282b525d3813f
+SHA512: 387b9969be7880b36f04da09eea89a5f0c4f4a108c9fa645540e4404adaf901f84840c109fc399e96bc8f5db0fccc292e2e909e0f045aaa421cbf71a1ccfb5e8
+Homepage: https://github.com/Flecart/folio
+Description: spec-first LaTeX document compiler
+ folio compiles LaTeX documents to PDF with its own consistent
+ semantics; it is written from scratch in Rust.
+ .
+ This package is self-contained and needs no TeX Live: it ships
+ folio's curated data tree in /usr/share/folio/texmf (Computer
+ Modern, AMS, Latin Modern, the EC metrics with the common cm-super
+ shapes, URW Times/Helvetica/Courier, hyphenation patterns for twelve
+ languages and the standard BibTeX styles).
+ .
+ An installed TeX Live, if any, is used for files the data tree does
+ not have, and enables the slimtex fallback engine.
+
