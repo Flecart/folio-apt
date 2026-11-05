@@ -74,7 +74,7 @@ sudo rm /etc/apt/sources.list.d/folio.list /etc/apt/keyrings/folio-archive-keyri
 
 ## Source code and licences
 
-folio is free software under **GPL-2.0-or-later**. Every release publishes the complete corresponding source as `folio-<version>-source.tar.zst`. It contains folio and every vendored Rust dependency, and builds offline. The bundled TeX data files keep their own licences: LPPL, GPL, OFL, GUST, Knuth and others. These are listed in `/usr/share/doc/folio/copyright`.
+folio is free software under **GPL-2.0-or-later**. Every release publishes the complete corresponding source as `folio-<version>-source.tar.zst`. It contains folio, every vendored Rust dependency (for 0.1.0-alpha.1 this includes slimtex, a GPL port of pdfTeX used for font and image embedding), and builds offline. The bundled TeX data files keep their own licences: LPPL, GPL, OFL, GUST, Knuth and others. These are listed in `/usr/share/doc/folio/copyright`.
 
 ---
 
