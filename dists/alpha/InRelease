@@ -4,7 +4,7 @@ Hash: SHA512
 Architectures: amd64 all
 Codename: alpha
 Components: main
-Date: Thu, 05 Nov 2026 15:18:09 +0000
+Date: Thu, 05 Nov 2026 15:19:21 +0000
 Description: folio LaTeX compiler
 Label: folio
 Origin: folio
@@ -31,8 +31,8 @@ SHA512:
  b2a5a6cc1d3f14f6ac2b2bc5b54d033f1c8da86abccc42ed8faacebe5265c9c942ecbb4969a04992f1e66a45fd4e1dcabd06146b1e6b12dcde5a1015526cc601             1212 main/binary-amd64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iHUEARYKAB0WIQS4lGEL9nD1HCSmRctUgMZxJ8h06AUCauyeMQAKCRBUgMZxJ8h0
-6DxJAP0bigSo1WxQjPIjXuLvh3C/NoCGhJyDgomo3wXSI9G4/gD+P/OXfcn6JHN2
-w5sCVcUthLMh6rTCtzTZ4EOgNrYlrgE=
-=hqd4
+iHUEARYKAB0WIQS4lGEL9nD1HCSmRctUgMZxJ8h06AUCauyeeQAKCRBUgMZxJ8h0
+6EUrAP9JKTppOOD7jDa1f2AG2fK6hUpNBno6n+g4NEdBV0xKHAEAi1fEHLtZ9PUr
+VRU7Q36MCjTkb0D0rgRkguoExIpmdw0=
+=a4P7
 -----END PGP SIGNATURE-----
