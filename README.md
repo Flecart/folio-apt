@@ -9,7 +9,7 @@ Debian/Ubuntu packages for **folio**. folio is a fast LaTeX-document compiler wr
 | `folio` | The compiler, plus its own data tree: Computer Modern, Latin Modern, EC/cm-super (common shapes), URW Times/Helvetica/Courier, AMS fonts, hyphenation for 12 languages, and BibTeX base and natbib styles. About 30 MB download and 41 MB installed. |
 | `folio-fonts-extra` | Optional. Rare cm-super shapes, every Latin Modern encoding, and Palatino, New Century, Bookman, Avant Garde and Zapf Chancery. |
 
-The packages run on **amd64** systems with glibc ≥ 2.36: Debian 12 (bookworm) or later, and Ubuntu 22.04 or later.
+The packages run on **amd64** systems with glibc ≥ 2.34: Debian 12 (bookworm) or later, and Ubuntu 22.04 or later.
 
 ## Install
 
@@ -40,10 +40,10 @@ Updates then arrive through `sudo apt upgrade`.
 
 ### Without the repository
 
-Download the `.deb` from the [Releases](https://github.com/Flecart/folio-apt/releases) page and install it:
+Download the `.deb` from the [Releases](https://github.com/Flecart/folio-apt/releases) page and install it. Release assets are named with the tag's version (`0.1.0-alpha.1`), because GitHub renames files that contain `~`; the package inside is still version `0.1.0~alpha1`:
 
 ```sh
-sudo apt install ./folio_0.1.0~alpha1_amd64.deb   # version from the release page
+sudo apt install ./folio_0.1.0-alpha.1_amd64.deb   # version from the release page
 ```
 
 Every release also includes `SHA256SUMS` and its signature, `SHA256SUMS.asc`. To verify a download:
@@ -54,7 +54,7 @@ gpg --verify SHA256SUMS.asc SHA256SUMS && sha256sum -c --ignore-missing SHA256SU
 
 ### Other Linux distributions
 
-Unpack `folio-<version>-x86_64-linux.tar.zst` anywhere. The binary finds its data tree next to itself.
+Unpack `folio-<version>-x86_64-linux.tar.zst` anywhere (`tar --zstd -xf ...`). The binary finds its data tree next to itself.
 
 ## Use
 
@@ -80,4 +80,4 @@ folio is free software under **GPL-2.0-or-later**. Every release publishes the c
 
 *Versioning:* Debian versions use `~alpha`/`~rc` (e.g. `0.1.0~alpha1`, tag `v0.1.0-alpha.1`) so that the final `0.1.0` sorts after every pre-release.
 
-*Maintainer notes:* this repository holds only release artifacts and the APT index (on the `gh-pages` branch). The packages are built from the folio sources by `cargo xtask dist release`. Run `./publish.sh 0.1.0~alpha1 <artifact-dir>` to create a GitHub release and update the signed APT index. Signing uses the maintainer's local GPG key; the key is never stored in CI.
+*Maintainer notes:* this repository holds only release artifacts and the APT index (on the `gh-pages` branch). The packages are built from the folio sources by `cargo xtask dist release`. Run `./publish.sh 0.1.0~alpha1 <artifact-dir>` to create a GitHub release and update the signed APT index (`DRY_RUN=1` builds the index locally without touching GitHub; see the script header). Per-release notes go in `notes/<version>.md`. The full procedure is in folio's `RELEASING.md`. Signing uses the maintainer's local GPG key; the key is never stored in CI.
